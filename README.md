@@ -59,45 +59,45 @@
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                              FRONTEND                                       │
-│  ┌─────────────────────────────────────────────────────────────────────┐   │
-│  │  Next.js 15 (App Router) + React 19 + TypeScript                    │   │
-│  │  ├── Server Components (SSR/SSG for SEO)                            │   │
-│  │  ├── Client Components (Interactive UI)                             │   │
-│  │  ├── TanStack Query (Data Caching & Sync)                          │   │
-│  │  └── TailwindCSS + CSS Modules (Styling)                           │   │
-│  └─────────────────────────────────────────────────────────────────────┘   │
-│                                    │                                         │
-│                                    ▼                                         │
+│  ┌─────────────────────────────────────────────────────────────────────┐    │
+│  │  Next.js 15 (App Router) + React 19 + TypeScript                    │    │
+│  │  ├── Server Components (SSR/SSG for SEO)                            │    │
+│  │  ├── Client Components (Interactive UI)                             │    │
+│  │  ├── TanStack Query (Data Caching & Sync)                           │    │
+│  │  └── TailwindCSS + CSS Modules (Styling)                            │    │
+│  └─────────────────────────────────────────────────────────────────────┘    │
+│                                    │                                        │
+│                                    ▼                                        │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│                              API LAYER                                       │
-│  ┌─────────────────────────────────────────────────────────────────────┐   │
-│  │  Next.js API Routes (40+ Endpoints)                                 │   │
-│  │  ├── /api/events/* (Search, CRUD, Nearby Events)                   │   │
-│  │  ├── /api/articles/* (CMS, Categories, Headlines)                  │   │
-│  │  ├── /api/venues/* (Venue Discovery by State/City)                 │   │
-│  │  ├── /api/artist-ranking/* (Artist/DJ Rankings)                    │   │
-│  │  └── /api/places-* (Google Places Integration)                     │   │
-│  └─────────────────────────────────────────────────────────────────────┘   │
-│                                    │                                         │
-│                                    ▼                                         │
+│                              API LAYER                                      │
+│  ┌─────────────────────────────────────────────────────────────────────┐    │
+│  │  Next.js API Routes (40+ Endpoints)                                 │    │
+│  │  ├── /api/events/* (Search, CRUD, Nearby Events)                    │    │
+│  │  ├── /api/articles/* (CMS, Categories, Headlines)                   │    │
+│  │  ├── /api/venues/* (Venue Discovery by State/City)                  │    │
+│  │  ├── /api/artist-ranking/* (Artist/DJ Rankings)                     │    │
+│  │  └── /api/places-* (Google Places Integration)                      │    │
+│  └─────────────────────────────────────────────────────────────────────┘    │
+│                                    │                                        │
+│                                    ▼                                        │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│                           DATA & SERVICES                                    │
-│  ┌───────────────┐  ┌───────────────┐  ┌───────────────┐  ┌─────────────┐ │
-│  │   Supabase    │  │   Firebase    │  │   Pinecone    │  │   OpenAI    │ │
-│  │  PostgreSQL   │  │     Auth      │  │   Vector DB   │  │    API      │ │
-│  │   + PostGIS   │  │   Firestore   │  │  (RAG/LLM)    │  │  (Content)  │ │
-│  └───────────────┘  └───────────────┘  └───────────────┘  └─────────────┘ │
-│                                    │                                         │
-│                                    ▼                                         │
+│                           DATA & SERVICES                                   │
+│  ┌───────────────┐  ┌───────────────┐  ┌───────────────┐  ┌─────────────┐   │
+│  │   Supabase    │  │   Firebase    │  │   Pinecone    │  │   OpenAI    │   │
+│  │  PostgreSQL   │  │     Auth      │  │   Vector DB   │  │    API      │   │
+│  │   + PostGIS   │  │   Firestore   │  │  (RAG/LLM)    │  │  (Content)  │   │
+│  └───────────────┘  └───────────────┘  └───────────────┘  └─────────────┘   │
+│                                    │                                        │
+│                                    ▼                                        │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│                           ETL PIPELINES                                      │
-│  ┌─────────────────────────────────────────────────────────────────────┐   │
-│  │  Linux VM Hosted ETL (Python + SQL)                                 │   │
-│  │  ├── Event Data Aggregation (Ticketmaster, Dice, Custom Sources)   │   │
-│  │  ├── Data Normalization & Deduplication                            │   │
-│  │  ├── Geospatial Coordinate Enrichment                              │   │
-│  │  └── Scheduled Jobs (Cron + Systemd)                               │   │
-│  └─────────────────────────────────────────────────────────────────────┘   │
+│                           ETL PIPELINES                                     │
+│  ┌─────────────────────────────────────────────────────────────────────┐    │
+│  │  Linux VM Hosted ETL (Python + SQL)                                 │    │
+│  │  ├── Event Data Aggregation (Ticketmaster, Dice, Custom Sources)    │    │
+│  │  ├── Data Normalization & Deduplication                             │    │
+│  │  ├── Geospatial Coordinate Enrichment                               │    │
+│  │  └── Scheduled Jobs (Cron + Systemd)                                │    │
+│  └─────────────────────────────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -160,7 +160,7 @@
 ```sql
 -- Events Table (100K+ records)
 ┌─────────────────────────────────────────────────────────────┐
-│ all_events / combined_tables                             │
+│ all_events / combined_tables                                │
 ├─────────────────────────────────────────────────────────────┤
 │ id (PK)           │ event_name        │ venue_name          │
 │ start_local_date  │ start_local_time  │ venue_address       │
