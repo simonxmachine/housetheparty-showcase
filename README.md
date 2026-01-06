@@ -52,10 +52,6 @@
 
 ## 🏗️ Architecture
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Architecture-Microservices-FF6B6B?style=for-the-badge" alt="Architecture" />
-</p>
-
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                              FRONTEND                                       │
