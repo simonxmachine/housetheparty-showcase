@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://housetheparty.com/htp_black_background.png" alt="House The Party" width="180" />
+  <img src="https://housetheparty.com/htp_black_background.png" alt="House The Party" width="400" />
 </p>
 
 <h1 align="center">🎉 House The Party</h1>
@@ -40,6 +40,14 @@
 | Artists/DJs Indexed     | 10,000+          |
 | States Covered          | All 50 US States |
 
+### Platform Preview
+
+<p align="center">
+  <img src="./screenshots/main_page_screen.png" alt="House The Party Main Page - Location-Based Event Search" width="800" />
+  <br />
+  <em>Main page featuring location-based event discovery with real-time search</em>
+</p>
+
 ---
 
 ## 🏗️ Architecture
@@ -50,7 +58,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                              FRONTEND                                        │
+│                              FRONTEND                                       │
 │  ┌─────────────────────────────────────────────────────────────────────┐   │
 │  │  Next.js 15 (App Router) + React 19 + TypeScript                    │   │
 │  │  ├── Server Components (SSR/SSG for SEO)                            │   │
@@ -103,6 +111,12 @@
 - **IP Geolocation**: Automatic user location detection for personalized results
 - **Multi-filter Support**: Genre, price range, age requirements, date range
 - **Real-time Search**: <300ms response time with optimized database indexes
+
+<p align="center">
+  <img src="./screenshots/search_page_screen.png" alt="Fast Event Search - <300ms Response Time" width="800" />
+  <br />
+  <em>Demonstrating the <300ms search latency with real-time filtering and results</em>
+</p>
 
 ### 📰 Integrated News/Blog CMS
 
